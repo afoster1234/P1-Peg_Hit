@@ -1,25 +1,11 @@
-extends RigidBody2D
+extends KinematicBody2D
 
-var screen_size
-export var strength : float = 200
+var bullet_fired = preload("res://src/Bullet.tscn")
 
-func _ready():
-	screen_size = get_viewport_rect().size
-
-func _process(delta):
-	var speed = Vector2()
-	if Input.is_action_just_pressed("right"):
-		var direction = Vector2(1,-1).normalized()
-		var velocity = direction * strength
-		apply_impulse(Vector2.ZERO, velocity)
-	if Input.is_action_just_pressed("left"):
-		var direction = Vector2(-1,1).normalized()
-		var velocity = direction * strength
-		apply_impulse(Vector2.ZERO, velocity)
-	if Input.is_action_just_pressed("up"):
-		var direction = Vector2(10,0).normalized()
-		var velocity = direction * strength
-		apply_impulse(Vector2.ZERO, velocity)
-	position += speed * delta
-	position.x = clamp(position.x, 0, screen_size.x)
-	position.y = clamp(position.y, 0, screen_size.y)
+func _physics_process(delta):
+	look_at(get_global_mouse_position())
+	if Input.is_action_pressed("fire"):
+		var bullet = bullet_fired.instance()
+		get_tree().get_root().add_child(bullet)
+		bullet.position = get_global_position()
+		bullet.fire(get_global_mouse_position(),10)
