@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/Peg.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/tile_crateDiagonal.png" type="Texture" id=2]
+[ext_resource path="res://src/Player.tscn" type="PackedScene" id=3]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
@@ -31,10 +32,12 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 
 [node name="Level" type="Node2D"]
 
-[node name="Peg" parent="." instance=ExtResource( 1 )]
-position = Vector2( 864.976, 285.656 )
-
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 2 )
 format = 1
-tile_data = PoolIntArray( 327693, 0, 0 )
+tile_data = PoolIntArray( 19, 0, 0, 65555, 0, 0, 131091, 0, 0, 196627, 0, 0, 262158, 0, 0, 262163, 0, 0, 327699, 0, 0, 393235, 0, 0, 458771, 0, 0, 524307, 0, 0, 589843, 0, 0, 655360, 0, 0, 655361, 0, 0, 655362, 0, 0, 655363, 0, 0, 655364, 0, 0, 655365, 0, 0, 655366, 0, 0, 655367, 0, 0, 655368, 0, 0, 655369, 0, 0, 655370, 0, 0, 655371, 0, 0, 655372, 0, 0, 655373, 0, 0, 655374, 0, 0, 655375, 0, 0, 655376, 0, 0, 655377, 0, 0, 655378, 0, 0, 655379, 0, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+
+[node name="Peg" parent="." instance=ExtResource( 1 )]
+position = Vector2( 928, 232 )
