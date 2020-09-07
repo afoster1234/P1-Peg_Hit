@@ -4,4 +4,4 @@ export var bullet_speed = 3
 
 func fire(mouse_pos,strength):
 	var velocity = mouse_pos*bullet_speed
-	apply_impulse(Vector2.ZERO, velocity)
+	apply_impulse(Vector2(1,-1), velocity)
