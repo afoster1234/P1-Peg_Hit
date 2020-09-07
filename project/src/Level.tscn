@@ -37,9 +37,24 @@ script = ExtResource( 4 )
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 2 )
 format = 1
-tile_data = PoolIntArray( 393234, 0, 0, 655360, 0, 0, 655361, 0, 0, 655362, 0, 0, 655363, 0, 0, 655364, 0, 0, 655365, 0, 0, 655366, 0, 0, 655367, 0, 0, 655368, 0, 0, 655369, 0, 0, 655370, 0, 0, 655371, 0, 0, 655372, 0, 0, 655373, 0, 0, 655374, 0, 0, 655375, 0, 0, 655376, 0, 0, 655377, 0, 0, 655378, 0, 0, 655379, 0, 0 )
+tile_data = PoolIntArray( 131082, 0, 0, 131088, 0, 0, 327693, 0, 0, 327699, 0, 0, 524298, 0, 0, 524304, 0, 0, 655360, 0, 0, 655361, 0, 0, 655362, 0, 0, 655363, 0, 0, 655364, 0, 0, 655365, 0, 0, 655366, 0, 0, 655367, 0, 0, 655368, 0, 0, 655369, 0, 0, 655370, 0, 0, 655371, 0, 0, 655372, 0, 0, 655373, 0, 0, 655374, 0, 0, 655375, 0, 0, 655376, 0, 0, 655377, 0, 0, 655378, 0, 0, 655379, 0, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 
 [node name="Peg" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1184, 360 )
+position = Vector2( 1056, 104 )
+
+[node name="Peg2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1248, 296 )
+
+[node name="Peg3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 864, 296 )
+
+[node name="Peg4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1056, 488 )
+
+[node name="Peg5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 672, 488 )
+
+[node name="Peg6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 672, 104 )
